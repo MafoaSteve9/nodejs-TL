@@ -5,6 +5,23 @@
 </head>
 <body>
         <h1>Todo List</h1>
-        
+
+        <h3>Tâches</h3>
+
+        <ul>
+            <% tasks.forEach((task) => { %>
+                <% if (task.done) { %>
+                    <li>
+                        <s><%= task.title  %></s>
+                        |  <a href="#">Suprimer</a>
+                    </li>
+                    <% } else { %>
+                <li>
+                   <%= task.title %> | <a href="#">Terminé</a>
+                </li>
+                <% } %>
+                
+            <%  }) %>
+        </ul>
 </body>
 </html>
