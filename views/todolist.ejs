@@ -18,7 +18,7 @@
                 <% if (task.done) { %>
                     <li>
                         <s><%= task.title  %></s>
-                        |  <a href="/task/<% idx %>/delete">Suprimer</a>
+                        |  <a href="/task/<%= idx %>/delete">Suprimer</a>
                     <% } else { %>
                    <%= task.title %> 
                         | <a href="/task/<%= idx %>/done">Terminé</a>
