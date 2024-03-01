@@ -26,6 +26,16 @@ app.post('/task', (req, res) => {
     res.redirect('/')
 })
 
+app.get('/task/:id/done', (req, res) => {
+    tasks[req.params.id].done = true;
+    res.redirect('/');
+});
+
+app.get('/task/:id/delete', (req, res) => {
+    tasks.splice(req.params.id, 1)
+    res.redirect('/');
+})
+
 app.get('/', (req, res) => {
     res.render('todolist', { tasks });
 });
