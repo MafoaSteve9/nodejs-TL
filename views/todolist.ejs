@@ -14,15 +14,14 @@
         <h3>Tâches</h3>
 
         <ul>
-            <% tasks.forEach((task) => { %>
+            <% tasks.forEach((task, idx) => { %>
                 <% if (task.done) { %>
                     <li>
                         <s><%= task.title  %></s>
-                        |  <a href="#">Suprimer</a>
-                    </li>
+                        |  <a href="/task/<% idx %>/delete">Suprimer</a>
                     <% } else { %>
-                <li>
-                   <%= task.title %> | <a href="#">Terminé</a>
+                   <%= task.title %> 
+                        | <a href="/task/<%= idx %>/done">Terminé</a>
                 </li>
                 <% } %>    
             <%  }) %>
