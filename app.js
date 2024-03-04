@@ -3,16 +3,7 @@ const session = require('express-session');
 const app = express();
 const port = 3000;
 
-// const tasks = [
-//     {
-//         title: "Apprendre à programmer",
-//         done: false,
-//     },
-//     {
-//         title: "Faire des courses",
-//         done: true,
-//     },
-// ]
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
